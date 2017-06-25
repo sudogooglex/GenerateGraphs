@@ -5,15 +5,20 @@ It will group transactions by "categories" and sum the associated amounts of eac
 A category is determined by a set of labels which looks identical.
 
 # Installation
-The transaction file path must be specified in the config.txt file which is in the root.  
-You can rename configTemplate.txt to config.txt
+`git clone https://github.com/sudogooglex/GenerateGraphs`
+`cd GenerateGraphs/`  
+`cp config.txt configTemplate.txt`  
+The transaction file path must be specified at the first line of the config.txt file.  
+`dotnet restore`  
+`dotnet clean`  
+`dotnet run`
 
 ### Example /config.txt :
 /home/user/Download/transaction.csv  
 Word1  
 ((\d{2})([\.\/]{1})(\d{2})([\.\/]{1})(\d{2}))
 
-### Expected input format :
+### Expected input format /transaction.csv :
 Date; Label; Amount  
 23/06/2017; CB TRANSACTION Shop_**A**1  22.06.17 CARD; **-50,00**  
 19/06/2017; BUY CB Shop_B1       17.06.17 CARD; 48,92  
@@ -30,3 +35,6 @@ Create a Pie or an histogram.
 Category; TotalAmount  
 Category**A**; **-65,01**  
 CategoryB; 48,92
+
+# Filter
+To filter some words before making categories, you can add regex in the config.txt.
