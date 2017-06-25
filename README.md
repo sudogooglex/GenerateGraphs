@@ -13,9 +13,9 @@ You can rename configTemplate.txt to config.txt
 
 ### Expected input format :
 Date; Label; Amount  
-23/06/2017; CB TRANSACTION Shop_A1  22.06.17 CARD; -50,00  
+23/06/2017; CB TRANSACTION Shop_**A**1  22.06.17 CARD; **-50,00**  
 19/06/2017; BUY CB Shop_B1       17.06.17 CARD; 48,92  
-08/06/2017; BUY CB Shop_A2 07.06.17 CARD; -15,01
+08/06/2017; BUY CB Shop_**A**2 07.06.17 CARD; **-15,01**
 
 The transaction.csv may contain positive or negative amounts.
 
@@ -26,5 +26,5 @@ Create a Pie or an histogram.
 
 ### Expected output format :
 Category; TotalAmount  
-CategoryA; -65,01  
+Category**A**; **-65,01**  
 CategoryB; 48,92
