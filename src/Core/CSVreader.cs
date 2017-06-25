@@ -9,7 +9,7 @@ namespace GenerateGraphs.src.Core
     public class CSVreader
     {
         public List<Transaction> Transactions;
-        public string TransactionPath = "";
+        public string TransactionPath;
 
         public CSVreader(string transactionPath) {
             TransactionPath = transactionPath;
@@ -17,7 +17,7 @@ namespace GenerateGraphs.src.Core
         /// <summary>
         /// Read the input transactions file and show the number of transactions parsed.
         /// </summary>
-        public void UpdateCSV() {
+        public int UpdateCSV() {
             Transactions = new List<Transaction>();
             using(var fs = File.OpenRead(TransactionPath))
             using(var reader = new StreamReader(fs))
@@ -34,11 +34,11 @@ namespace GenerateGraphs.src.Core
                         var transaction = new Transaction(date, label, amount);
                         Transactions.Add(transaction);
                     } catch (Exception e) {
-                        Console.WriteLine("A line failed to load : " + line + "\n" + e);
+                        Console.WriteLine($"A line failed to load : {line}\n{e}");
                     }
                 }
             }
-            Console.WriteLine("UpdateCSV: Parsed " + Transactions.Count + " lines.");
+            return Transactions.Count;
         }
     }
 }

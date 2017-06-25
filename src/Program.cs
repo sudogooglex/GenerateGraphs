@@ -10,12 +10,15 @@ namespace GenerateGraphs.src
         static void Main(string[] args)
         {
             var config = Ut.ReadTransactionPath();
-
             CSVreader csvReader = new CSVreader(config.transactionPath);
-            csvReader.UpdateCSV();
-
+            var linesNb = csvReader.UpdateCSV();
             var categoryMaker = new CategoryMaker(csvReader.Transactions, config.ignoreList);
-            categoryMaker.MakeCategory();
+            var categoriesNb = categoryMaker.MakeCategory();
+            var reduction = ((decimal)categoriesNb/(decimal)linesNb)*100;
+
+            Console.WriteLine($"UpdateCSV: Parsed {linesNb} lines.");
+            Console.WriteLine($"WriteOutPut: Written {categoriesNb} lines.");
+            Console.WriteLine($"Main: Reduction of {reduction:0.00}%.");
         }
     }
 }

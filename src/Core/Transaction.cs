@@ -24,7 +24,7 @@ namespace GenerateGraphs.src.Core
         }
 
         public override string ToString() {
-            return string.Format("Date: {0}, Label: {1}, Amount: {2}", Date, Label, Amount);
+            return string.Format($"Date: {Date}, Label: {Label}, Amount: {Amount}");
         }
     }
 }

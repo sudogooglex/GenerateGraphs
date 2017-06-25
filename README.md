@@ -27,7 +27,7 @@ Date; Label; Amount
 The transaction.csv may contain positive or negative amounts.
 
 # Output
-The output file is output.csv.  
+The output file is output.csv, at the root of the project.  
 To generate the associated graph, use Google docs or Excel with the output.csv.
 Create a Pie or an histogram.
 
