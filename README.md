@@ -5,11 +5,11 @@ It will group transactions by "categories" and sum the associated amounts of eac
 A category is determined by a set of labels which looks identical.
 
 # Installation
-`git clone https://github.com/sudogooglex/GenerateGraphs`
+`git clone https://github.com/sudogooglex/GenerateGraphs`  
 `cd GenerateGraphs/`  
 `cp config.txt configTemplate.txt`  
 The transaction file path must be specified at the first line of the config.txt file.  
-`dotnet restore`  
+`dotnet restore # Restore Nuget packages`  
 `dotnet clean`  
 `dotnet run`
 

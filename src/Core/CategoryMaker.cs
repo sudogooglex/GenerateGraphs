@@ -35,6 +35,10 @@ namespace GenerateGraphs.src.Core
                 // 2. Trim
                 label = label.Trim();
             });
+
+            Transactions.ForEach(t => {
+                Console.WriteLine(t);
+            });
         }
     }
 }

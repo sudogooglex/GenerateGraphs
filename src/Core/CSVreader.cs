@@ -28,7 +28,7 @@ namespace GenerateGraphs.src.Core
                     var line = reader.ReadLine();
                     try {
                         var values = line.Split(';');
-                        var date = DateTime.ParseExact(values[0], "dd/mm/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                        var date = DateTime.Parse(values[0]);
                         var label = values[1];
                         var amount = decimal.Parse(values[2]);
                         var transaction = new Transaction(date, label, amount);

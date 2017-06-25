@@ -22,5 +22,9 @@ namespace GenerateGraphs.src.Core
             Label = label;
             Amount = amount;
         }
+
+        public override string ToString() {
+            return string.Format("Date: {0}, Label: {1}, Amount: {2}", Date, Label, Amount);
+        }
     }
 }
