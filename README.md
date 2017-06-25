@@ -9,7 +9,9 @@ The transaction file path must be specified in the config.txt file which is in t
 You can rename configTemplate.txt to config.txt
 
 ### Example /config.txt :
-/home/user/Download/transaction.csv
+/home/user/Download/transaction.csv  
+Word1  
+((\d{2})([\.\/]{1})(\d{2})([\.\/]{1})(\d{2}))
 
 ### Expected input format :
 Date; Label; Amount  

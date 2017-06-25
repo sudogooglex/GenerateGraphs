@@ -11,11 +11,14 @@ namespace GenerateGraphs.src.Core
         public List<Transaction> Transactions;
         public string TransactionPath = "";
 
-        public CSVreader() {
-            Transactions = new List<Transaction>();
-            TransactionPath = Ut.ReadTransactionPath();
+        public CSVreader(string transactionPath) {
+            TransactionPath = transactionPath;
         }
+        /// <summary>
+        /// Read the input transactions file and show the number of transactions parsed.
+        /// </summary>
         public void UpdateCSV() {
+            Transactions = new List<Transaction>();
             using(var fs = File.OpenRead(TransactionPath))
             using(var reader = new StreamReader(fs))
             {

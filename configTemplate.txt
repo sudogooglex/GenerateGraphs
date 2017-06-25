@@ -1,1 +1,10 @@
 /home/user/Download/transaction.csv
+
+Word1
+Word 2
+((\d{2})([\.\/]{1})(\d{2})([\.\/]{1})(\d{2}))
+
+# This is a comment.
+# The first line is the input path.
+# other lines are the list of string to ignore in the categories.
+# Blank lines are also escaped.
