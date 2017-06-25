@@ -14,7 +14,7 @@ namespace GenerateGraphs.src
             var linesNb = csvReader.UpdateCSV();
             var categoryMaker = new CategoryMaker(csvReader.Transactions, config.ignoreList);
             var categoriesNb = categoryMaker.MakeCategory();
-            var reduction = ((decimal)categoriesNb/(decimal)linesNb)*100;
+            var reduction = 100 * ((decimal)linesNb - (decimal)categoriesNb)/(decimal)linesNb;
 
             Console.WriteLine($"UpdateCSV: Parsed {linesNb} lines.");
             Console.WriteLine($"WriteOutPut: Written {categoriesNb} lines.");
